@@ -11,6 +11,7 @@ import {
 
 import Image from "next/image";
 import Link from "next/link";
+import ThemeToggler from "./ThemeToggler";
 import logoDark from "../img/logo-dark.png";
 
 export default function Navbar() {
@@ -20,30 +21,34 @@ export default function Navbar() {
         <Link href="/">
           <Image src={logoDark} alt="Technews" width={110} height={40} />
         </Link>
-        <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-            <Avatar.Root className="inline-flex h-10 w-10 select-none items-center justify-center overflow-hidden rounded-full bg-primary align-middle">
-              <Avatar.Image
-                className="h-full w-full object-cover"
-                src="https://github.com/shadcn.png"
-                alt="@shadcn"
-              />
-              <Avatar.Fallback className="leading-1 flex h-full w-full items-center justify-center bg-white text-[15px] font-medium text-primary">
-                TN
-              </Avatar.Fallback>
-            </Avatar.Root>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent align="end">
-            <DropdownMenuLabel>My Account</DropdownMenuLabel>
-            <DropdownMenuSeparator />
-            <DropdownMenuItem>
-              <Link href="/profile">Profile</Link>
-            </DropdownMenuItem>
-            <DropdownMenuItem>
-              <Link href="/auth">Logout</Link>
-            </DropdownMenuItem>
-          </DropdownMenuContent>
-        </DropdownMenu>
+
+        <div className="flex items-center">
+          <ThemeToggler />
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Avatar.Root className="inline-flex h-10 w-10 select-none items-center justify-center overflow-hidden rounded-full bg-primary align-middle">
+                <Avatar.Image
+                  className="h-full w-full object-cover"
+                  src="https://github.com/shadcn.png"
+                  alt="@shadcn"
+                />
+                <Avatar.Fallback className="leading-1 flex h-full w-full items-center justify-center bg-white text-[15px] font-medium text-primary">
+                  TN
+                </Avatar.Fallback>
+              </Avatar.Root>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end">
+              <DropdownMenuLabel>My Account</DropdownMenuLabel>
+              <DropdownMenuSeparator />
+              <DropdownMenuItem>
+                <Link href="/profile">Profile</Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <Link href="/auth">Logout</Link>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+        </div>
       </div>
     </nav>
   );

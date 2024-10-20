@@ -14,7 +14,7 @@ import Link from "next/link";
 
 export function Sidebar() {
   return (
-    <Command className="rounded-lg border shadow-md md:min-w-[250px]">
+    <Command className="rounded-lg border-r shadow-md md:min-w-[250px]">
       <CommandInput placeholder="Type a command or search..." />
       <CommandList>
         <CommandEmpty>No results found.</CommandEmpty>

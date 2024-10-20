@@ -1,8 +1,7 @@
 import "./globals.css";
 
 import type { Metadata } from "next";
-import Navbar from "@/components/Navbar";
-import { Sidebar } from "@/components/Sidbar";
+import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import { Toaster } from "@/components/ui/toaster";
 import localFont from "next/font/local";
 
@@ -30,14 +29,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <Navbar />
-        <div className="flex container mx-auto">
-          <div className="h-svh md:block w-[300px]">
-            <Sidebar />
-          </div>
-          <div className="p-5 w-full md:max-w-[1114px]">{children}</div>
-        </div>
-        <Toaster />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+          storageKey="dashboard-theme"
+        >
+          {children}
+          <Toaster />
+        </ThemeProvider>
       </body>
     </html>
   );
