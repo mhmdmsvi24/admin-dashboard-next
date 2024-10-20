@@ -10,7 +10,7 @@ import {
 
 import Link from "next/link";
 import { Post } from "@/types/posts";
-import posts from "@/data/post";
+import posts from "@/data/posts";
 
 interface PostTableProps {
   limit?: number;

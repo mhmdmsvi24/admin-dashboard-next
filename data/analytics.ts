@@ -75,4 +75,4 @@ const data: AnalyticsItem[] = [
   },
 ];
 
-export default data;
+export { data };

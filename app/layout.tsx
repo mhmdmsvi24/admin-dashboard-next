@@ -3,6 +3,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import { Sidebar } from "@/components/Sidbar";
+import { Toaster } from "@/components/ui/toaster";
 import localFont from "next/font/local";
 
 const geistSans = localFont({
@@ -36,6 +37,7 @@ export default function RootLayout({
           </div>
           <div className="p-5 w-full md:max-w-[1114px]">{children}</div>
         </div>
+        <Toaster />
       </body>
     </html>
   );

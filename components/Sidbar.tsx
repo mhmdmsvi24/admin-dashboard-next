@@ -25,7 +25,7 @@ export function Sidebar() {
           </CommandItem>
           <CommandItem>
             <Newspaper className="mr-4 h-4 w-4" />
-            <Link href="/post">Post</Link>
+            <Link href="/posts">Post</Link>
           </CommandItem>
           <CommandItem>
             <Folders className="mr-4 h-4 w-4" />
