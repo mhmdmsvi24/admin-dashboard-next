@@ -51,9 +51,9 @@ const LoginForm = () => {
         <CardTitle>Login</CardTitle>
         <CardDescription>Log into your accout with your credintials</CardDescription>
       </CardHeader>
-      <CardContent className="space-y-2">
+      <CardContent>
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">
+          <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-3">
             <FormField
               control={form.control}
               name="email"
@@ -94,7 +94,7 @@ const LoginForm = () => {
                 </FormItem>
               )}
             />
-            <Button className="w-full">Sign in</Button>
+            <Button className="w-full font-bold">Sign in</Button>
           </form>
         </Form>
       </CardContent>

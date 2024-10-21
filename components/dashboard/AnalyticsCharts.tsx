@@ -8,7 +8,7 @@ import { data } from "@/data/analytics";
 const AnalyticsChart = () => {
   return (
     <>
-      <Card>
+      <Card className="mt-10">
         <CardHeader>
           <CardTitle>Analytics For This Year</CardTitle>
           <CardDescription>Views Per Month</CardDescription>
